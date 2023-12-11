@@ -1,11 +1,14 @@
 import Player from './Player.js';
+import Object from './Object.js';
 
 export default class Game {
     constructor(){
         this.player = new Player(this);
+        this.object = new Object(this);
     }
     draw(context){
         this.player.draw(context);
+        this.object.draw(context);
     }
     update(){
         this.player.update()
