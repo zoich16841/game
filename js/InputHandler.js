@@ -5,10 +5,12 @@ export default class InputHandler {
             switch(e.key){
                 case('ArrowRight'):
                     this.player.state.right = true;
-                    console.log(this.player.state.right);
                     break;
                 case('ArrowLeft'):
                     this.player.state.left = true;
+                    break;
+                case(' '):
+                    this.player.state.jump = true;
                     break;
             }
         })
@@ -16,10 +18,11 @@ export default class InputHandler {
             switch(e.key){
                 case('ArrowRight'):
                     this.player.state.right = false;
-                    console.log(this.player.state.right);
-                    break;
                 case('ArrowLeft'):
                     this.player.state.left = false;
+                    break;
+                case(' '):
+                    this.player.state.jump = true;
                     break;
             }
         })

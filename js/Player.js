@@ -11,6 +11,7 @@ export default class Player {
         this.state = {
             right: false,
             left: false,
+            jump: false,
         }
     }
     draw(context){
