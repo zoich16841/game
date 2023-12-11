@@ -5,6 +5,8 @@ export default class Player {
         this.InputHandler = new InputHandler(this);
         this.x = 10;
         this.y = 10;
+        this.w = 50;
+        this.h = 50;
         this.speed = 3;
         this.state = {
             right: false,
@@ -12,7 +14,7 @@ export default class Player {
         }
     }
     draw(context){
-        context.fillRect(this.x, this.y, 50, 50)
+        context.fillRect(this.x, this.y, this.w, this.h)
     }
     update(){
         this.state.right ? this.x += this.speed : 0; 
