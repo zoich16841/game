@@ -14,5 +14,9 @@ export default class Game {
         this.player.update()
         this.player.x < 0 ? this.player.x = 0 : 0;
         this.player.x + this.player.w > 800 ? this.player.x = 800 - this.player.w : 0;
+
+        if(this.player.x + this.player.w> this.object.x){
+            this.player.x = 0
+        }
     }
 }
