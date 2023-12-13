@@ -22,7 +22,7 @@ export default class InputHandler {
                     this.player.state.left = false;
                     break;
                 case(' '):
-                    this.player.state.jump = true;
+                    this.player.state.jump = false;
                     break;
             }
         })
