@@ -9,10 +9,13 @@ export default class Player {
         this.h = 50;
         this.jumpHeight = 5;
         this.speed = 3;
+        this.gravity = 0.5;
         this.state = {
             right: false,
             left: false,
             jump: false,
+            onGround: true,
+            
         }
     }
     draw(context){
@@ -23,6 +26,10 @@ export default class Player {
         this.state.left ? this.x -= this.speed : 0;
 
         this.state.jump ? this.y -= this.jumpHeight : 0;
-        this.y < 50 ? this.y = 100 : 0;
+        if(this.y < 40){
+            this.y += this.gravity
+        } else if(this.y + this.h > this.y) {
+            this.y = 100
+        }
     }
 }
