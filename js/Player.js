@@ -31,14 +31,14 @@ export default class Player {
             this.state.onGround = false;
         }
         if (!this.state.onGround){
-            this.xy += this.gravity * 0.4
+            this.xy += this.gravity * 0.1
             this.y += this.xy
             this.state.onGround = true;     
         }
 
         if(this.y + this.h > 600){
             this.y = 600 - this.h
-            // this.state.onGround = true
+            this.state.onGround = true
         }
 
     }
